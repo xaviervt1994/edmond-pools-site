@@ -1,11 +1,8 @@
-// Toggle mobile nav menu
-const navToggle = document.querySelector(".nav-toggle");
-const nav = document.querySelector("nav");
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const mobileNav = document.getElementById("mobileNav");
 
-navToggle.addEventListener("click", () => {
-  if (nav.style.display === "flex") {
-    nav.style.display = "none";
-  } else {
-    nav.style.display = "flex";
-  }
+  hamburger.addEventListener("click", () => {
+    mobileNav.classList.toggle("show");
+  });
 });
