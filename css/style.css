@@ -39,3 +39,49 @@ footer {
   background: #222;
   color: white;
 }
+
+.about,
+.services-preview {
+  background: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.about h2,
+.services-preview h2 {
+  color: #0077cc;
+  margin-bottom: 1rem;
+}
+
+.services-preview ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.services-preview li {
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.page-banner {
+  background: #0077cc;
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.services-list {
+  background: #fff;
+  padding: 3rem 2rem;
+}
+
+.services-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services-list li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
