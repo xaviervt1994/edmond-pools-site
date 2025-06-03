@@ -18,7 +18,8 @@ nav a {
 }
 
 .hero {
-  background: url("../images/pool-background.jpg") no-repeat center center/cover;
+  background: url("../images\pool-background.jpg.webp") no-repeat center
+    center/cover;
   padding: 5rem 2rem;
   color: white;
   text-align: center;
