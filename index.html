@@ -14,8 +14,7 @@
     <header>
       <div class="container">
         <h1>Edmond Pools</h1>
-        <button class="nav-toggle" id="navToggle">&#9776;</button>
-        <nav id="navMenu">
+        <nav>
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
           <a href="projects.html">Projects</a>
@@ -26,12 +25,14 @@
     </header>
 
     <section class="hero">
-      <div class="container">
-        <h2>Pool Cleaning & Maintenance Experts</h2>
-        <p>
-          Serving Edmond, OK and surrounding areas with expert pool services.
-        </p>
-        <a href="contact.html" class="cta-button">Request a Quote</a>
+      <div class="hero-overlay">
+        <div class="container">
+          <h2>Pool Cleaning & Maintenance Experts</h2>
+          <p>
+            Serving Edmond, OK and surrounding areas with expert pool services.
+          </p>
+          <a href="contact.html" class="cta-button">Request a Quote</a>
+        </div>
       </div>
     </section>
 
@@ -65,10 +66,6 @@
       <p>&copy; 2025 Edmond Pools. All rights reserved.</p>
     </footer>
 
-    <script>
-      document.getElementById("navToggle").addEventListener("click", () => {
-        document.getElementById("navMenu").classList.toggle("active");
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
