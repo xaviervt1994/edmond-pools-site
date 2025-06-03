@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background: #0077cc;
+  background: #00cfff;
   color: white;
   padding: 1rem 2rem;
 }
@@ -18,8 +18,8 @@ nav a {
 }
 
 .hero {
-  background: url("../images\pool-background.jpg.webp") no-repeat center
-    center/cover;
+  background: url("../images/pool-background.jpg.webp") no-repeat center
+    center/cover center/cover;
   padding: 5rem 2rem;
   color: white;
   text-align: center;
@@ -50,7 +50,7 @@ footer {
 
 .about h2,
 .services-preview h2 {
-  color: #0077cc;
+  color: #00cfff;
   margin-bottom: 1rem;
 }
 
