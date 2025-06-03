@@ -1,3 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -56,12 +68,14 @@ nav a.active {
   position: relative;
   color: white;
   text-align: center;
+  width: 100%;
+  overflow: hidden;
 }
 
 .hero-overlay {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5rem 2rem;
-  width: 100%;
+  max-width: 100%;
 }
 
 .cta-button {
@@ -120,5 +134,16 @@ footer {
 
   .hero-overlay {
     padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-overlay {
+    padding: 3rem 1rem;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
