@@ -14,7 +14,8 @@
     <header>
       <div class="container">
         <h1>Edmond Pools</h1>
-        <nav>
+        <button class="nav-toggle" id="navToggle">&#9776;</button>
+        <nav id="navMenu">
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
           <a href="projects.html">Projects</a>
@@ -64,6 +65,10 @@
       <p>&copy; 2025 Edmond Pools. All rights reserved.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+      document.getElementById("navToggle").addEventListener("click", () => {
+        document.getElementById("navMenu").classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
