@@ -231,6 +231,7 @@ footer {
 
 .project-item img {
   width: 100%;
+  max-width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 6px;
@@ -240,4 +241,9 @@ footer {
 .project-item h3 {
   color: #00c2d1;
   margin-bottom: 0.5rem;
+}
+
+.projects h2,
+.project-item h3 {
+  color: #00c2d1;
 }
