@@ -2,54 +2,61 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services | Edmond Pools</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
   </head>
   <body>
     <header>
       <div class="container">
         <h1>Edmond Pools</h1>
-        <nav>
+        <nav class="desktop-nav">
           <a href="index.html">Home</a>
           <a href="services.html" class="active">Services</a>
           <a href="projects.html">Projects</a>
           <a href="jobs.html">Jobs</a>
           <a href="contact.html">Contact</a>
         </nav>
+        <button class="hamburger" id="hamburger">&#9776;</button>
       </div>
+      <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </header>
 
     <main class="container">
-      <section class="services">
+      <section class="services-page">
         <h2>Our Pool Services</h2>
-        <ul>
-          <li>
+        <div class="service-cards">
+          <div class="service-card">
+            <img src="images/placeholder-cleaning.jpg" alt="Pool Cleaning" />
             <h3>Pool Cleaning</h3>
             <p>Regular cleaning to keep your pool sparkling clear.</p>
-            <img src="images/placeholder-cleaning.jpg" alt="Pool Cleaning" />
-          </li>
-          <li>
-            <h3>Pool Maintenance</h3>
-            <p>Professional maintenance for pumps, filters, and chemicals.</p>
+          </div>
+          <div class="service-card">
             <img
               src="images/placeholder-maintenance.jpg"
               alt="Pool Maintenance"
             />
-          </li>
-          <li>
+            <h3>Pool Maintenance</h3>
+            <p>Professional maintenance for pumps, filters, and chemicals.</p>
+          </div>
+          <div class="service-card">
+            <img src="images/placeholder-repairs.jpg" alt="Pool Repairs" />
             <h3>Repairs & Inspections</h3>
             <p>Fix leaks, broken equipment, and keep your pool safe.</p>
-            <img src="images/placeholder-repairs.jpg" alt="Pool Repairs" />
-          </li>
-        </ul>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer>
       <p>&copy; 2025 Edmond Pools. All rights reserved.</p>
     </footer>
-
-    <script src="js/script.js"></script>
   </body>
 </html>
