@@ -133,6 +133,41 @@ nav a.active {
   font-weight: bold;
 }
 
+.testimonials {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+.testimonial {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: white;
+  border-left: 4px solid var(--accent-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+
+.testimonial p {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial h4 {
+  text-align: right;
+  font-weight: normal;
+  color: #555;
+}
+
 /* Footer */
 footer {
   text-align: center;
