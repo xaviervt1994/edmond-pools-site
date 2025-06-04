@@ -17,6 +17,7 @@ body {
   background: #f4f4f4;
 }
 
+/* Header */
 header {
   background: #00c2d1;
   color: white;
@@ -36,6 +37,8 @@ nav a {
   margin-left: 15px;
   text-decoration: none;
   font-weight: bold;
+  line-height: 1.5;
+  padding: 0.5rem 0;
 }
 
 nav a.active {
@@ -53,6 +56,7 @@ nav a.active {
   background: none;
   border: none;
   color: white;
+  cursor: pointer;
 }
 
 .mobile-nav {
@@ -62,6 +66,11 @@ nav a.active {
   padding: 1rem;
 }
 
+.mobile-nav.show {
+  display: flex;
+}
+
+/* Hero Section */
 .hero {
   background: url("../images/pool-background.jpg.webp") no-repeat center center /
     cover;
@@ -73,11 +82,23 @@ nav a.active {
 }
 
 .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.4)
+  );
   padding: 5rem 2rem;
   max-width: 100%;
 }
 
+.hero small {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* CTA Button */
 .cta-button {
   background-color: #ffffff;
   color: #00c2d1;
@@ -87,6 +108,7 @@ nav a.active {
   font-weight: bold;
 }
 
+/* About & Services Sections */
 .about,
 .services-preview {
   background: #fff;
@@ -111,6 +133,7 @@ nav a.active {
   font-weight: bold;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
@@ -118,7 +141,7 @@ footer {
   color: white;
 }
 
-/* Responsive Styles */
+/* Mobile Styles */
 @media (max-width: 768px) {
   .desktop-nav {
     display: none;
@@ -128,16 +151,6 @@ footer {
     display: block;
   }
 
-  .mobile-nav.show {
-    display: flex;
-  }
-
-  .hero-overlay {
-    padding: 3rem 1rem;
-  }
-}
-
-@media (max-width: 768px) {
   .hero-overlay {
     padding: 3rem 1rem;
   }
