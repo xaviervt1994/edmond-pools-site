@@ -400,3 +400,51 @@ footer {
   color: #0074cc;
   font-weight: bold;
 }
+
+.cta-banner {
+  background: #00c2d1;
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  margin: 3rem auto;
+}
+
+.cta-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cta-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-banner .cta-button {
+  background-color: white;
+  color: #00c2d1;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-banner .cta-button:hover {
+  background-color: #ffe600;
+  color: black;
+}
+
+.top-contact-bar {
+  background-color: #007f89;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.top-contact-bar a {
+  color: #ffe600;
+  text-decoration: none;
+  font-weight: bold;
+}
