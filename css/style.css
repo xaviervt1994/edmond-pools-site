@@ -176,6 +176,19 @@ footer {
   color: white;
 }
 
+footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #ffe600; /* Optional: a nice accent color on hover */
+}
+
+footer a:visited {
+  color: #ffffff;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .desktop-nav {
