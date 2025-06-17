@@ -9,7 +9,21 @@
       content="Learn about Edmond Pools — our story, team, and commitment to providing quality pool care in Edmond, Oklahoma."
     />
 
+    <!-- Open Graph (for social preview) -->
+    <meta property="og:title" content="About Edmond Pools" />
+    <meta
+      property="og:description"
+      content="Get to know Edmond Pools — the team, values, and story behind our trusted pool care service."
+    />
+    <meta property="og:url" content="https://edmondokpools.com/about.html" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://edmondokpools.com/images/social-preview.jpg"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
   </head>
   <body>
     <div class="top-contact-bar">
@@ -22,26 +36,24 @@
     <header>
       <div class="container">
         <h1>Edmond Pools</h1>
-        <div id="hamburger">&#9776;</div>
-        <nav>
-          <div id="mobileNav" class="mobile-nav">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="projects.html">Projects</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html" class="active">About</a>
-          </div>
-          <div class="desktop-nav">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="projects.html">Projects</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html" class="active">About</a>
-          </div>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="projects.html">Projects</a>
+          <a href="jobs.html">Jobs</a>
+          <a href="contact.html">Contact</a>
+          <a href="about.html" class="active">About</a>
         </nav>
+        <button class="hamburger" id="hamburger">&#9776;</button>
       </div>
+      <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html" class="active">About</a>
+      </nav>
     </header>
 
     <main class="container">
@@ -84,6 +96,7 @@
           <a href="contact.html">Get in touch today!</a>
         </p>
       </section>
+
       <section class="testimonials">
         <h2>What Our Customers Say</h2>
         <div class="testimonial">
@@ -104,6 +117,7 @@
           <h4>- Lisa G., Arcadia</h4>
         </div>
       </section>
+
       <section class="cta-banner">
         <h2>Get a Free Quote from Edmond Pools</h2>
         <p>
@@ -113,24 +127,27 @@
         <a href="contact.html" class="cta-button">Request a Quote</a>
       </section>
     </main>
+
     <footer>
-      <p>&copy; 2025 Edmond Pools. All rights reserved.</p>
-      <p><strong>SOS Pools Inc</strong></p>
-      <p>
-        Call: <a href="tel:4055138155">405-513-8155 (Office)</a><br />
-        Text: <a href="tel:4054712028">405-471-2028</a>
-      </p>
-      <p>
-        Email: <a href="mailto:edmondpools@yahoo.com">edmondpools@yahoo.com</a>
-      </p>
-      <p>
-        Hours: Mon–Fri: 7:30 AM – 4:30 PM<br />
-        Sat–Sun: Closed
-      </p>
+      <address>
+        <p>&copy; 2025 Edmond Pools. All rights reserved.</p>
+        <p><strong>SOS Pools Inc</strong></p>
+        <p>
+          Call: <a href="tel:4055138155">405-513-8155 (Office)</a><br />
+          Text: <a href="tel:4054712028">405-471-2028</a>
+        </p>
+        <p>
+          Email:
+          <a href="mailto:edmondpools@yahoo.com">edmondpools@yahoo.com</a>
+        </p>
+        <p>
+          Hours: Mon–Fri: 7:30 AM – 4:30 PM<br />
+          Sat–Sun: Closed
+        </p>
+      </address>
     </footer>
 
-    <script src="js/script.js"></script>
-    <!--Start of Tawk.to Script-->
+    <!-- Live Chat -->
     <script type="text/javascript">
       var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
@@ -144,6 +161,5 @@
         s0.parentNode.insertBefore(s1, s0);
       })();
     </script>
-    <!--End of Tawk.to Script-->
   </body>
 </html>
