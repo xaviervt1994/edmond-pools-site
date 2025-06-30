@@ -268,6 +268,12 @@ footer a:visited {
   }
 }
 
+.projects {
+  background-color: #f9f9f9;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+}
+
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -281,7 +287,7 @@ footer a:visited {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1.25rem;
   margin-top: 2rem;
-  padding: 0 1rem;
+  padding: 0 1rem 2rem; /* Add bottom padding */
 }
 
 .photo-gallery img {
@@ -299,7 +305,8 @@ footer a:visited {
 
 @media (max-width: 600px) {
   .photo-gallery img {
-    height: 120px;
+    height: auto; /* Remove forced height */
+    max-height: 400px; /* Let it grow, but cap it */
   }
 }
 
