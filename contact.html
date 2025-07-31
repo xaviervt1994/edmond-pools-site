@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | Edmond Pools</title>
     <meta
       name="description"
@@ -22,94 +22,900 @@
       content="https://edmondokpools.com/images/social-preview.jpg"
     />
 
-    <link rel="stylesheet" href="css/style.css" />
-    <script defer src="js/script.js"></script>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "pool-blue": "#0EA5E9",
+              "pool-dark": "#0284C7",
+              "pool-light": "#38BDF8",
+              "pool-teal": "#14B8A6",
+              "pool-navy": "#1E293B",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @keyframes ripple {
+        0% {
+          transform: scale(0.8);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(2.4);
+          opacity: 0;
+        }
+      }
+      .ripple::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(56, 189, 248, 0.5);
+        transform: translate(-50%, -50%);
+        animation: ripple 1.5s infinite;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #0ea5e9, #14b8a6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .floating {
+        animation: float 3s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
   </head>
-  <body>
-    <div class="top-contact-bar">
-      <p>
-        Call: <a href="tel:4055138155">405-513-8155</a> | Text:
-        <a href="tel:4054712028">405-471-2028</a>
-      </p>
+  <body class="bg-gradient-to-br from-slate-50 to-blue-50 font-sans">
+    <!-- Top Contact Bar -->
+    <div
+      class="bg-gradient-to-r from-pool-navy to-pool-dark text-white py-2 px-4"
+    >
+      <div class="container mx-auto text-center">
+        <p class="text-sm font-medium">
+          📞 Call:
+          <a
+            href="tel:4055138155"
+            class="hover:text-pool-light transition-colors duration-300 underline decoration-pool-light"
+            >405-513-8155</a
+          >
+          | 💬 Text:
+          <a
+            href="tel:4054712028"
+            class="hover:text-pool-light transition-colors duration-300 underline decoration-pool-light"
+            >405-471-2028</a
+          >
+        </p>
+      </div>
     </div>
 
-    <header>
-      <div class="container">
-        <h1>Edmond Pools</h1>
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="index.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="projects.html">Projects</a>
-          <a href="jobs.html">Jobs</a>
-          <a href="contact.html" class="active">Contact</a>
-          <a href="about.html">About</a>
+    <!-- Header -->
+    <header
+      class="bg-white/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-pool-light/20"
+    >
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-pool-blue to-pool-teal rounded-full flex items-center justify-center shadow-lg"
+            >
+              <div
+                class="w-8 h-8 bg-white rounded-full flex items-center justify-center"
+              >
+                <div
+                  class="w-5 h-5 bg-gradient-to-br from-pool-blue to-pool-teal rounded-full"
+                ></div>
+              </div>
+            </div>
+            <h1 class="text-2xl font-bold gradient-text">Edmond Pools</h1>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex space-x-8" aria-label="Main navigation">
+            <a
+              href="index.html"
+              class="text-slate-600 hover:text-pool-blue font-medium px-3 py-2 transition-all duration-300 hover:border-b-2 hover:border-pool-blue"
+              >Home</a
+            >
+            <a
+              href="services.html"
+              class="text-slate-600 hover:text-pool-blue font-medium px-3 py-2 transition-all duration-300 hover:border-b-2 hover:border-pool-blue"
+              >Services</a
+            >
+            <a
+              href="projects.html"
+              class="text-slate-600 hover:text-pool-blue font-medium px-3 py-2 transition-all duration-300 hover:border-b-2 hover:border-pool-blue"
+              >Projects</a
+            >
+            <a
+              href="jobs.html"
+              class="text-slate-600 hover:text-pool-blue font-medium px-3 py-2 transition-all duration-300 hover:border-b-2 hover:border-pool-blue"
+              >Jobs</a
+            >
+            <a
+              href="contact.html"
+              class="text-pool-navy font-semibold border-b-2 border-pool-blue px-3 py-2 transition-all duration-300"
+              >Contact</a
+            >
+            <a
+              href="about.html"
+              class="text-slate-600 hover:text-pool-blue font-medium px-3 py-2 transition-all duration-300 hover:border-b-2 hover:border-pool-blue"
+              >About</a
+            >
+          </nav>
+
+          <!-- Mobile Hamburger -->
+          <button
+            class="md:hidden text-pool-navy hover:text-pool-blue transition-colors duration-300"
+            id="hamburger"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav
+          class="md:hidden mt-4 pb-4 border-t border-pool-light/20 hidden"
+          id="mobileNav"
+        >
+          <div class="flex flex-col space-y-2 pt-4">
+            <a
+              href="index.html"
+              class="text-slate-600 hover:text-pool-blue px-4 py-3 rounded-lg hover:bg-pool-light/10 transition-all duration-300"
+              >Home</a
+            >
+            <a
+              href="services.html"
+              class="text-slate-600 hover:text-pool-blue px-4 py-3 rounded-lg hover:bg-pool-light/10 transition-all duration-300"
+              >Services</a
+            >
+            <a
+              href="projects.html"
+              class="text-slate-600 hover:text-pool-blue px-4 py-3 rounded-lg hover:bg-pool-light/10 transition-all duration-300"
+              >Projects</a
+            >
+            <a
+              href="jobs.html"
+              class="text-slate-600 hover:text-pool-blue px-4 py-3 rounded-lg hover:bg-pool-light/10 transition-all duration-300"
+              >Jobs</a
+            >
+            <a
+              href="contact.html"
+              class="text-pool-navy font-semibold bg-pool-light/10 px-4 py-3 rounded-lg"
+              >Contact</a
+            >
+            <a
+              href="about.html"
+              class="text-slate-600 hover:text-pool-blue px-4 py-3 rounded-lg hover:bg-pool-light/10 transition-all duration-300"
+              >About</a
+            >
+          </div>
         </nav>
-        <button class="hamburger" id="hamburger">&#9776;</button>
       </div>
-      <nav class="mobile-nav" id="mobileNav">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="projects.html">Projects</a>
-        <a href="jobs.html">Jobs</a>
-        <a href="contact.html" class="active">Contact</a>
-        <a href="about.html">About</a>
-      </nav>
     </header>
 
-    <main class="container">
-      <section class="contact-form">
-        <h2>Get in Touch</h2>
-        <form action="https://formspree.io/f/xanjbqyp" method="POST">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="relative py-32 flex items-center justify-center overflow-hidden"
+      >
+        <!-- Animated Background -->
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-pool-blue via-pool-teal to-pool-dark"
+        ></div>
+        <div class="absolute inset-0 bg-black/20"></div>
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+        <!-- Floating Elements -->
+        <div
+          class="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full floating"
+        ></div>
+        <div
+          class="absolute top-40 right-20 w-16 h-16 bg-white/10 rounded-full floating"
+          style="animation-delay: -1s"
+        ></div>
+        <div
+          class="absolute bottom-32 left-1/4 w-12 h-12 bg-white/10 rounded-full floating"
+          style="animation-delay: -2s"
+        ></div>
 
-          <label for="phone">Phone:</label>
-          <input type="tel" id="phone" name="phone" />
+        <div
+          class="relative z-10 container mx-auto px-4 text-center text-white"
+        >
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              Get in
+              <span
+                class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300"
+              >
+                Touch
+              </span>
+            </h2>
 
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+            <div
+              class="flex flex-col md:flex-row items-center justify-center gap-4 mb-8"
+            >
+              <div
+                class="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full"
+              >
+                <div
+                  class="w-3 h-3 bg-green-400 rounded-full animate-pulse"
+                ></div>
+                <span class="text-sm font-medium">Free Quotes Available</span>
+              </div>
+              <div
+                class="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full"
+              >
+                <div
+                  class="w-3 h-3 bg-blue-400 rounded-full animate-pulse"
+                ></div>
+                <span class="text-sm font-medium">Quick Response Time</span>
+              </div>
+            </div>
 
-          <input
-            type="hidden"
-            name="_next"
-            value="https://xaviervt1994.github.io/edmond-pools-site/thankyou.html"
-          />
-
-          <button type="submit">Send Message</button>
-        </form>
+            <p
+              class="text-xl md:text-2xl mb-12 text-blue-100 max-w-2xl mx-auto leading-relaxed"
+            >
+              Ready to transform your pool? Contact our Edmond pool experts
+              today for professional service and competitive pricing.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section class="cta-banner">
-        <h2>Get a Free Quote from Edmond Pools</h2>
-        <p>
-          Whether it's cleaning, repairs, or a brand new pool, our team is ready
-          to help.
-        </p>
-        <a href="contact.html" class="cta-button">Request a Quote</a>
+      <!-- Contact Form Section -->
+      <section class="py-20 bg-white relative overflow-hidden">
+        <div
+          class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-pool-light/5 to-transparent"
+        ></div>
+        <div class="container mx-auto px-4 relative z-10">
+          <div class="max-w-4xl mx-auto">
+            <div
+              class="inline-flex items-center gap-2 bg-pool-light/10 px-6 py-2 rounded-full mb-8 mx-auto block w-fit"
+            >
+              <div
+                class="w-2 h-2 bg-pool-blue rounded-full animate-pulse"
+              ></div>
+              <span class="text-pool-dark font-medium">Contact Form</span>
+            </div>
+
+            <h2
+              class="text-4xl md:text-5xl font-bold text-pool-navy mb-8 leading-tight text-center"
+            >
+              Send Us a
+              <span class="gradient-text">Message</span>
+            </h2>
+
+            <div
+              class="bg-gradient-to-br from-pool-light/5 to-pool-teal/5 p-8 md:p-12 rounded-3xl shadow-xl border border-pool-light/20"
+            >
+              <form
+                action="https://formspree.io/f/xanjbqyp"
+                method="POST"
+                class="space-y-6"
+              >
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-pool-navy font-semibold mb-2"
+                      >Name *</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      class="w-full px-4 py-3 bg-white border-2 border-pool-light/30 rounded-xl focus:border-pool-blue focus:outline-none transition-colors duration-300 text-pool-navy"
+                      placeholder="Your full name"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-pool-navy font-semibold mb-2"
+                      >Email *</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      class="w-full px-4 py-3 bg-white border-2 border-pool-light/30 rounded-xl focus:border-pool-blue focus:outline-none transition-colors duration-300 text-pool-navy"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-pool-navy font-semibold mb-2"
+                    >Phone</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="w-full px-4 py-3 bg-white border-2 border-pool-light/30 rounded-xl focus:border-pool-blue focus:outline-none transition-colors duration-300 text-pool-navy"
+                    placeholder="(555) 123-4567"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="message"
+                    class="block text-pool-navy font-semibold mb-2"
+                    >Message *</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    class="w-full px-4 py-3 bg-white border-2 border-pool-light/30 rounded-xl focus:border-pool-blue focus:outline-none transition-colors duration-300 text-pool-navy resize-none"
+                    placeholder="Tell us about your pool service needs..."
+                  ></textarea>
+                </div>
+
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://xaviervt1994.github.io/edmond-pools-site/thankyou.html"
+                />
+
+                <div class="text-center">
+                  <button
+                    type="submit"
+                    class="group relative bg-gradient-to-r from-pool-blue to-pool-teal text-white px-10 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-pool-blue/25 transform hover:scale-105 transition-all duration-300 ripple overflow-hidden"
+                  >
+                    <span class="relative z-10 flex items-center gap-2">
+                      Send Message
+                      <svg
+                        class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                        ></path>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Information Section -->
+      <section class="py-20 bg-gradient-to-br from-slate-50 to-pool-light/10">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <div
+              class="inline-flex items-center gap-2 bg-pool-blue/10 px-6 py-2 rounded-full mb-8"
+            >
+              <div
+                class="w-2 h-2 bg-pool-blue rounded-full animate-pulse"
+              ></div>
+              <span class="text-pool-dark font-medium"
+                >Contact Information</span
+              >
+            </div>
+
+            <h2 class="text-4xl md:text-5xl font-bold text-pool-navy mb-6">
+              Reach Out
+              <span class="gradient-text">Anytime</span>
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Phone Contact -->
+            <div
+              class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-pool-light/20"
+            >
+              <div
+                class="w-14 h-14 bg-gradient-to-br from-pool-blue to-pool-teal rounded-xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-pool-navy mb-3">
+                Call Our Office
+              </h3>
+              <p class="text-slate-600 mb-4">
+                Speak directly with our team for immediate assistance
+              </p>
+              <a
+                href="tel:4055138155"
+                class="text-pool-blue hover:text-pool-dark font-semibold text-lg transition-colors duration-300"
+                >405-513-8155</a
+              >
+            </div>
+
+            <!-- Text Contact -->
+            <div
+              class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-pool-light/20"
+            >
+              <div
+                class="w-14 h-14 bg-gradient-to-br from-pool-teal to-pool-blue rounded-xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-pool-navy mb-3">Send a Text</h3>
+              <p class="text-slate-600 mb-4">
+                Quick questions? Text us for a fast response
+              </p>
+              <a
+                href="tel:4054712028"
+                class="text-pool-blue hover:text-pool-dark font-semibold text-lg transition-colors duration-300"
+                >405-471-2028</a
+              >
+            </div>
+
+            <!-- Email Contact -->
+            <div
+              class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-pool-light/20 md:col-span-2 lg:col-span-1"
+            >
+              <div
+                class="w-14 h-14 bg-gradient-to-br from-pool-blue to-pool-teal rounded-xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+              >
+                <svg
+                  class="w-7 h-7 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-pool-navy mb-3">Email Us</h3>
+              <p class="text-slate-600 mb-4">
+                Send detailed inquiries and receive comprehensive responses
+              </p>
+              <a
+                href="mailto:edmondpools@yahoo.com"
+                class="text-pool-blue hover:text-pool-dark font-semibold text-lg transition-colors duration-300 break-words"
+                >edmondpools@yahoo.com</a
+              >
+            </div>
+          </div>
+
+          <!-- Business Hours -->
+          <div class="mt-16 max-w-2xl mx-auto">
+            <div
+              class="bg-gradient-to-br from-pool-light/5 to-pool-teal/5 p-8 rounded-3xl shadow-xl border border-pool-light/20 text-center"
+            >
+              <h3 class="text-2xl font-bold text-pool-navy mb-6">
+                Business Hours
+              </h3>
+              <div class="space-y-3">
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-600 font-medium"
+                    >Monday – Friday:</span
+                  >
+                  <span class="text-pool-navy font-bold"
+                    >7:30 AM – 4:30 PM</span
+                  >
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-600 font-medium"
+                    >Saturday – Sunday:</span
+                  >
+                  <span class="text-pool-navy font-bold">Closed</span>
+                </div>
+                <div
+                  class="mt-6 p-4 bg-green-500/20 rounded-xl border border-green-500/30"
+                >
+                  <div class="flex items-center justify-center gap-2">
+                    <div
+                      class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
+                    ></div>
+                    <span class="text-green-700 font-semibold"
+                      >Emergency Services Available 24/7</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Banner -->
+      <section
+        class="py-20 bg-gradient-to-r from-pool-navy via-pool-dark to-pool-navy relative overflow-hidden"
+      >
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div
+          class="absolute top-10 left-1/4 w-32 h-32 bg-white/5 rounded-full floating"
+        ></div>
+        <div
+          class="absolute bottom-10 right-1/4 w-24 h-24 bg-white/5 rounded-full floating"
+          style="animation-delay: -1.5s"
+        ></div>
+
+        <div class="container mx-auto px-4 text-center relative z-10">
+          <div class="max-w-3xl mx-auto">
+            <h2
+              class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+            >
+              Get a
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300"
+                >Free Quote</span
+              >
+              from Edmond Pools
+            </h2>
+            <p class="text-xl text-blue-100 mb-10 leading-relaxed">
+              Whether it's cleaning, repairs, or a brand new pool, our team is
+              ready to help make your backyard dreams a reality.
+            </p>
+
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            >
+              <a
+                href="contact.html"
+                class="group bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-10 py-5 rounded-full font-bold text-lg shadow-2xl hover:shadow-yellow-500/25 transform hover:scale-105 transition-all duration-300 ripple overflow-hidden relative"
+              >
+                <span class="relative z-10 flex items-center gap-2">
+                  Request a Quote
+                  <svg
+                    class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+
+              <div class="flex items-center gap-4 text-white">
+                <div class="w-px h-8 bg-white/30 hidden sm:block"></div>
+                <div class="flex items-center gap-2">
+                  <div
+                    class="w-3 h-3 bg-green-400 rounded-full animate-pulse"
+                  ></div>
+                  <span class="text-sm">Available 24/7 for emergencies</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <address>
-        <p>&copy; 2025 Edmond Pools. All rights reserved.</p>
-        <p><strong>SOS Pools Inc</strong></p>
-        <p>
-          Call: <a href="tel:4055138155">405-513-8155 (Office)</a><br />
-          Text: <a href="tel:4054712028">405-471-2028</a>
-        </p>
-        <p>
-          Email:
-          <a href="mailto:edmondpools@yahoo.com">edmondpools@yahoo.com</a>
-        </p>
-        <p>
-          Hours: Mon–Fri: 7:30 AM – 4:30 PM<br />
-          Sat–Sun: Closed
-        </p>
-      </address>
+    <!-- Footer -->
+    <footer
+      class="bg-gradient-to-br from-pool-navy to-slate-900 text-white py-16"
+    >
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Company Info -->
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-pool-blue to-pool-teal rounded-full flex items-center justify-center"
+              >
+                <div
+                  class="w-8 h-8 bg-white rounded-full flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 bg-gradient-to-br from-pool-blue to-pool-teal rounded-full"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold">Edmond Pools</h3>
+                <p class="text-pool-light font-medium">SOS Pools Inc</p>
+              </div>
+            </div>
+            <p class="text-blue-100 leading-relaxed mb-6">
+              Your trusted local pool cleaning and maintenance experts serving
+              Edmond, OK and surrounding areas with professional, reliable
+              service.
+            </p>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-bold mb-4 text-pool-light">Contact Us</h4>
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 bg-pool-blue/20 rounded-lg flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-4 h-4 text-pool-light"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm text-blue-200">Office</p>
+                  <a
+                    href="tel:4055138155"
+                    class="text-white hover:text-pool-light transition-colors duration-300 font-medium"
+                    >405-513-8155</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 bg-pool-teal/20 rounded-lg flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-4 h-4 text-pool-light"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm text-blue-200">Text</p>
+                  <a
+                    href="tel:4054712028"
+                    class="text-white hover:text-pool-light transition-colors duration-300 font-medium"
+                    >405-471-2028</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 bg-pool-blue/20 rounded-lg flex items-center justify-center flex-shrink-0"
+                >
+                  <svg
+                    class="w-4 h-4 text-pool-light"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm text-blue-200">Email</p>
+                  <a
+                    href="mailto:edmondpools@yahoo.com"
+                    class="text-white hover:text-pool-light transition-colors duration-300 font-medium"
+                    >edmondpools@yahoo.com</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Business Hours -->
+          <div>
+            <h4 class="text-lg font-bold mb-4 text-pool-light">
+              Business Hours
+            </h4>
+            <div class="space-y-2">
+              <div class="flex justify-between">
+                <span class="text-blue-200">Mon–Fri:</span>
+                <span class="text-white font-medium">7:30 AM – 4:30 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-blue-200">Sat–Sun:</span>
+                <span class="text-white font-medium">Closed</span>
+              </div>
+              <div
+                class="mt-4 p-3 bg-green-500/20 rounded-lg border border-green-500/30"
+              >
+                <div class="flex items-center gap-2">
+                  <div
+                    class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
+                  ></div>
+                  <span class="text-green-300 text-sm font-medium"
+                    >Emergency Services Available 24/7</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-bold mb-4 text-pool-light">Quick Links</h4>
+            <div class="space-y-2">
+              <a
+                href="index.html"
+                class="block text-blue-200 hover:text-white transition-colors duration-300"
+                >Home</a
+              >
+              <a
+                href="services.html"
+                class="block text-blue-200 hover:text-white transition-colors duration-300"
+                >Services</a
+              >
+              <a
+                href="projects.html"
+                class="block text-blue-200 hover:text-white transition-colors duration-300"
+                >Projects</a
+              >
+              <a
+                href="jobs.html"
+                class="block text-blue-200 hover:text-white transition-colors duration-300"
+                >Jobs</a
+              >
+              <a
+                href="about.html"
+                class="block text-blue-200 hover:text-white transition-colors duration-300"
+                >About</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-white/10 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-blue-200">
+              &copy; 2025 Edmond Pools. All rights reserved.
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
+                ></div>
+                <span class="text-sm text-blue-200">Licensed & Insured</span>
+              </div>
+              <div class="w-px h-4 bg-white/20"></div>
+              <div class="flex items-center gap-2">
+                <div
+                  class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"
+                ></div>
+                <span class="text-sm text-blue-200">Locally Owned</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+      document
+        .getElementById("hamburger")
+        .addEventListener("click", function () {
+          const mobileNav = document.getElementById("mobileNav");
+          mobileNav.classList.toggle("hidden");
+        });
+
+      // Add smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Add scroll effect to header
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 100) {
+          header.classList.add("bg-white/95");
+        } else {
+          header.classList.remove("bg-white/95");
+        }
+      });
+
+      // Form enhancement
+      const form = document.querySelector("form");
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      form.addEventListener("submit", function (e) {
+        submitBtn.innerHTML =
+          '<span class="relative z-10 flex items-center gap-2">Sending... <div class="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div></span>';
+        submitBtn.disabled = true;
+      });
+    </script>
 
     <!-- Live Chat -->
     <script type="text/javascript">
